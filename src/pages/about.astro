@@ -1,0 +1,65 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+
+const thingsILove = [
+  {thing: 'Html and Css', reason: 'This was the one of the first thing that i learned in terms of programing. It was pretty nice to see websites that felt alienating before, and make one by yourself. It reserves a speacial place in heart'},
+  {thing: 'Javascript', reason: 'Ahhhh.. where shall i start from. This is love of my life. After learning html and css, I jumped in javascript and it presented a pleathera of things to learn.. ranging from concepts like loops to promises. I learned and I almost feel a lot comfortable in it.'},
+  {thing: 'Haskell', reason: 'Recently, I started learning haskell on a friends recomendation and I have loved it so far. It is fun to program in a purely function language where you have nothing but function. I learned lot about function programing. I would recomend everyone to try it once, it is a great experience.'},
+]
+---
+
+<html lang="en">
+  <head>
+    <MainHead title="About | Kaustubh" description="About | Kaustubh" />
+      <style lang="scss">
+      .heroImg {
+        object-fit: cover;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        @media(min-width: 600px) {
+          img {
+            width: 50%; 
+            height: 50%; 
+            max-width: 400px; 
+            float:right
+          }
+        }
+      }
+
+      .bio {
+        font-size: var(--f-u1);
+        line-height: 2;
+        /* margin-left: minmax(10px, 20px); */
+      }
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <div class="wrapper">
+      <div class="bio wrapper wrapper__readable mt8">
+      <h1>About</h1>
+        <p>Hello! I am Kaustubh. I am a Web developer, UI/UX enthusiast.</p>
+      <div class="heroImg">
+        <!-- <img width="1400" height="350" src="https://images.unsplash.com/photo-1581977012607-4091712d36f9?auto=format&fit=crop&w=1400&h=350&q=75" /> -->
+        <img src="/assets/illustration.jpg" alt="illustartion">
+      </div>
+
+        <h5>Things I love</h5>
+        <ul>
+        {thingsILove.map(item => (
+          <li>
+            <h6>{item.thing}</h6>
+            <p>{item.reason}</p>
+          </li>
+        ))}
+        </ul>
+    </div>
+    <Footer />
+</body>
+</html>

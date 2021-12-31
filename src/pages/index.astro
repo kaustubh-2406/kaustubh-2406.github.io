@@ -1,0 +1,156 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Button from '../components/Button/index.jsx';
+import Pill from '../components/Pill/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+import Footer from '../components/Footer/index.jsx';
+import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
+
+const techs = ['Html/Css', 'Bootstrap', 'Sass/Scss', 'Javascript', 'React', 'Svelte', 'Vue', 'Nodejs', 'Express', 'MongoDb', 'Haskell']
+
+const featuredProject = [
+  {title: '2048 game', desc: '2048 game is a fun game where we control the blocks laid on 4x4 board. When we combine two blocks they get combined and its value get changed to the next power of 2. Doing this process we intend to create 2048.', link: 'https://www.github.com/kaustubh-2406/'},
+  {title: 'Game of life', desc: 'Game of life is a cellular automation devised by British mathematician. There is no win or lose, it is just for stimutaion purpose. In it a population of cells are selected at random and rules dictate wheather they would survive for next genration or not. Build with react', link: 'https://www.github.com/kaustubh-2406/'},
+  {title: 'Tracky - Time tracking extension for Chrome', desc: 'It is a time tracking extension for chromium browsers. It is one of my first projects.', link: 'https://www.github.com/kaustubh-2406'},
+  // {title: 'Maze game in Svelte', desc: 'It is similar to the mazes in the newspapers where we need to find the way out.', link: 'https://www.github.com/kaustubh-2406'},
+]
+
+// Data Fetching: List all Markdown posts in the repo.
+// const projects = Astro.fetchContent('./project/**/*.md');
+// const featuredProject = projects[0];
+---
+<html lang="en">
+  <head>
+    <MainHead title="Portfolio | Kaustubh" description="Kaustubh: Developer, Learner, and UI/UX Enthusiast..." />
+    <style lang="scss">
+      $w-s: 880px;
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        
+        @media (min-width: $w-s) {
+          height: 45vw;
+        }
+      }
+
+      .img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .gradient,
+      .gradient2 {
+        background-image: url('/assets/mesh-gradient.jpg');
+        background-size: cover;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      .gradient2 {
+        opacity: 0.85;
+        mix-blend-mode: multiply;
+        background-size: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2rem;
+
+        @media (min-width: $w-s) {
+          padding-left: 4rem;
+        }
+      }
+
+      .title {
+        font-size: var(--f-u3);
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+
+        @media (min-width: $w-s) {
+          font-size: var(--f-u4);
+        }
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+
+        @media (min-width: 1200px) {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
+
+      .sectionTitle {
+        font-weight: 500;
+        font-size: var(--f-u4);
+        margin-top: 3rem;
+      }
+
+      .subtitle {
+        display: block;
+        font-weight: 400;
+        font-size: var(--f-d3);
+      }
+
+      .bio {
+        line-height: 2;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <header class="hero">
+      <img class="img" src="/assets/home.jpg" />
+      <div class="gradient" />
+      <div class="gradient2" />
+      <div class="overlay">
+        <div class="title">
+          <p>Hi! I'm Kaustubh.</p>
+          <h3 style="max-width: 60%">I create user interfaces and experiences that you remember.</h3>
+        </div>
+          <Button class="mt2">Contact me</Button>
+      </div>
+    </header>
+    <main class="wrapper mt4 mb4">
+      <section class="grid main-sec">
+        <div class="section">
+          <h3 class="sectionTitle">Technologies familier:</h3>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap">
+            {techs.map(tech => (
+              <Pill rounded content={tech} color="grey" />
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 class="sectionTitle">Some projects</h3>
+          {featuredProject.map(project => (
+            <>
+              <h5>{project.title}</h5>
+              <p>{project.desc}</p>
+            </>
+          ))}
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
