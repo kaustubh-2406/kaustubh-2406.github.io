@@ -4,7 +4,7 @@ import Button from '../components/Button/index.jsx';
 import Pill from '../components/Pill/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import Footer from '../components/Footer/index.jsx';
-import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
+// import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
 
 const techs = ['Html/Css', 'Bootstrap', 'Sass/Scss', 'Javascript', 'React', 'Svelte', 'Vue', 'Nodejs', 'Express', 'MongoDb', 'Haskell']
 
@@ -128,15 +128,14 @@ const featuredProject = [
     </header>
     <main class="wrapper mt4 mb4">
       <section class="grid main-sec">
-        <div class="section">
+        <!-- <div class="section"> -->
           <h3 class="sectionTitle">Technologies familier:</h3>
           <div style="display: flex; gap: 10px; flex-wrap: wrap">
             {techs.map(tech => (
-              <Pill rounded content={tech} color="grey" />
+              <Pill rounded content={tech} color="#ffdbcf" />
             ))}
           </div>
-	<p>You can find my resume at: <a target="_blank" href="/kaustubh_resume.pdf" download></a></p>
-        </div>
+        <!-- </div> -->
         <div>
           <h3 class="sectionTitle">Some projects</h3>
           {featuredProject.map(project => (
@@ -146,6 +145,7 @@ const featuredProject = [
             </>
           ))}
         </div>
+	      <p>You can find my resume <a target="_blank" href="/kaustubh_resume.pdf" download>here</a></p>
       </section>
     </main>
     <Footer />
