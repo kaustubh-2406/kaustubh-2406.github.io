@@ -92,10 +92,6 @@ const featuredProject = [
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
-
-        @media (min-width: 1200px) {
-          grid-template-columns: 2fr 1fr;
-        }
       }
 
       .sectionTitle {
@@ -127,7 +123,7 @@ const featuredProject = [
           <p>Hi! I'm Kaustubh.</p>
           <h3 style="max-width: 60%">I create user interfaces and experiences that you remember.</h3>
         </div>
-          <Button class="mt2">Contact me</Button>
+          <a href="https://www.github.com/kaustubh-2406" target="_blank" class="mt2">Visit github</Button>
       </div>
     </header>
     <main class="wrapper mt4 mb4">
@@ -139,6 +135,7 @@ const featuredProject = [
               <Pill rounded content={tech} color="grey" />
             ))}
           </div>
+	<p>You can find my resume at: <a target="_blank" href="/kaustubh_resume.pdf" download></a></p>
         </div>
         <div>
           <h3 class="sectionTitle">Some projects</h3>
