@@ -9,5 +9,7 @@
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the Preact renderer to support Preact JSX components.
-  renderers: ['@astrojs/renderer-preact'],
+  renderers: ["@astrojs/renderer-preact"],
+  site: "https://kaustubh-2406.github.io",
+  base: "/kaustubh-2406.github.io",
 });
