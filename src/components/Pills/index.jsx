@@ -1,11 +1,11 @@
-import {h} from 'preact'
+import React from "react";
 
-export default function ({list}) {
+export default function ({ list }) {
   return (
     <>
-      {list.map(item => (
-        <Pill rounded content={item} color={'yellow'} />
+      {list.map((item) => (
+        <Pill rounded content={item} color={"yellow"} />
       ))}
     </>
-  )
+  );
 }
