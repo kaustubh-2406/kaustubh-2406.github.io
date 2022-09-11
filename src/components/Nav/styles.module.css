@@ -1,0 +1,25 @@
+.hoverLink {
+  text-decoration: none;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      transparent
+    ),
+    linear-gradient(
+      to right,
+      rgb(168, 185, 201, 0),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+
+  transition: background-size 200ms;
+}
+
+.hoverLink:hover,
+.hoverLink:focus {
+  background-size: 0 3px, 100% 3px;
+}

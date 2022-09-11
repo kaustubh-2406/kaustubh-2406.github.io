@@ -38,10 +38,6 @@ const featuredProject = [
   },
   // {title: 'Maze game in Svelte', desc: 'It is similar to the mazes in the newspapers where we need to find the way out.', link: 'https://www.github.com/kaustubh-2406'},
 ];
-
-// Data Fetching: List all Markdown posts in the repo.
-// const projects = Astro.fetchContent('./project/**/*.md');
-// const featuredProject = projects[0];
 ---
 
 <html lang="en">
@@ -50,7 +46,7 @@ const featuredProject = [
       title="Portfolio | Kaustubh"
       description="Kaustubh: Developer, Learner, and UI/UX Enthusiast..."
     />
-    <style lang="scss">
+    <!-- <style lang="scss">
       $w-s: 880px;
 
       .hero {
@@ -140,46 +136,78 @@ const featuredProject = [
         line-height: 2;
         margin-bottom: 2rem;
       }
+    </style> -->
+
+    <style>
+      .gradient,
+      .gradient2 {
+        background-image: url("/assets/mesh-gradient.jpg");
+        background-size: cover;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      .gradient2 {
+        opacity: 0.85;
+        mix-blend-mode: multiply;
+        background-size: cover;
+      }
     </style>
   </head>
   <body>
-    <Nav />
+    <Nav active="home" />
+    <div class="pt-24"></div>
     <header class="hero">
-      <img class="img" src="/assets/home.jpg" />
-      <div class="gradient"></div>
-      <div class="gradient2"></div>
-      <div class="overlay">
-        <div class="title">
-          <p>Hi! I'm Kaustubh.</p>
-          <h3 style="max-width: 60%">
+      <div class="relative">
+        <img
+          class="img min-w-3/5 h-auto sm:w-full sm:h-auto mx-auto"
+          src="/assets/home.jpg"
+        />
+        <div class="gradient"></div>
+        <div class="gradient2"></div>
+        <div class="absolute top-8 sm:top-1/3 m-8 z-10">
+          <p class="text-xl font-semibold sm:font-normal sm:text-5xl">
+            Hi! I'm Kaustubh.
+          </p>
+          <h3 class="text-lg max-w-sm sm:max-w-md sm:text-2xl sm:mt-3">
             I create user interfaces and experiences that you remember.
           </h3>
+          <a
+            href="https://www.github.com/kaustubh-2406"
+            target="_blank"
+            class="inline-block bg-blue-500 my-2 px-4 py-2 rounded text-sm sm:text-md"
+          >
+            Visit github
+          </a>
         </div>
-        <a
-          href="https://www.github.com/kaustubh-2406"
-          target="_blank"
-          class="mt2">Visit github</a
-        >
       </div>
     </header>
-    <main class="wrapper mt4 mb4">
+    <main class="wrapper mx-8">
       <section class="main-sec">
-        <!-- <div class="section"> -->
-        <h3 class="sectionTitle">Technologies familier:</h3>
+        <h3 class="text-2xl font-semibold my-8 mt-16">
+          Technologies familier:
+        </h3>
         <div style="display: flex; gap: 10px; flex-wrap: wrap">
           {techs.map((tech) => <Pill rounded content={tech} color="#ffdbcf" />)}
         </div>
-        <!-- </div> -->
-        <div>
-          <h3 class="sectionTitle">Some projects</h3>
-          {
-            featuredProject.map((project) => (
-              <>
-                <h5>{project.title}</h5>
-                <p>{project.desc}</p>
-              </>
-            ))
-          }
+        <div class="my-8">
+          <h3 class="text-2xl font-semibold">Some projects</h3>
+          <div>
+            {
+              featuredProject.map((project) => (
+                <div class="py-4">
+                  <h5 class="text-xl mb-2">{project.title}</h5>
+                  <p class="text-md">{project.desc}</p>
+                </div>
+              ))
+            }
+          </div>
         </div>
         <p>
           You can find my resume <a
