@@ -22,9 +22,5 @@
   {
     "name": "Haskell",
     "reason": "Recently, I started learning haskell on a friends recomendation and I have loved it so far. It is fun to program in a purely function language where you have nothing but function. I learned lot about function programing. I would recomend everyone to try it once, it is a great experience."
-  },
-  {
-    "name": "Rust",
-    "reason": "I have tried out Rust. It feels very good. I havent given it much time to comment much but it is what it is."
   }
 ]
