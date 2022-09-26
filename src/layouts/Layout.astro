@@ -1,7 +1,5 @@
 ---
-import MainHead from "../components/MainHead.astro";
-import Button from "../components/Button/index.jsx";
-import Footer from "../components/Footer/index.jsx";
+import Footer from "../components/Footer/index.astro";
 import Nav from "../components/Nav/index.jsx";
 
 const {
@@ -10,99 +8,35 @@ const {
 } = Astro.props;
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" property="og:description" content={description} />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <!-- <link rel="stylesheet" type="text/css" href="/_astro/src/scss/global.css"> -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
       rel="stylesheet"
     />
     <title>{title}</title>
 
-    <!-- <style lang="scss">
-      .hero {
-        padding: 8rem;
-        display: flex;
-        background-color: var(--t-fg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 25vw;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    <style>
+      * {
+        font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
-
-      .tag {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        text-transform: uppercase;
-
-        &:nth-of-type(1n) {
-          color: var(--c-green);
-        }
-        &:nth-of-type(2n) {
-          color: var(--c-orange);
-        }
-        &:nth-of-type(3n) {
-          color: var(--c-blue);
-        }
-        &:nth-of-type(4n) {
-          color: var(--c-pink);
-        }
-      }
-
-      .title {
-        font-size: var(--f-u10);
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.0625em;
-      }
-
-      .leadIn {
-        color: var(--t-bg);
-        background-color: var(--t-fg);
-      }
-
-      .tagline {
-        font-weight: 300;
-        font-size: var(--f-u3);
-        line-height: 1.5;
-      }
-
-      .content {
-        font-size: var(--f-u1);
-        line-height: 2.2;
-      }
-    </style> -->
+    </style>
   </head>
   <body>
     <Nav />
-    <div class="mt-8"></div>
-    <header style={`background-image:url(${content.img})`} class="hero">
-      <h1 class="title">{content.title}</h1>
-    </header>
-    <div class="leadIn">
-      <div class="wrapper pt8 pb8 mb8 tac">
-        {content.tags.map((t) => <span class="tag">{t}</span>)}
-        <h3 class="tagline">{content.description}</h3>
-      </div>
+
+    <div class="flex flex-col flex-1 items-center justify-center">
+      <slot />
     </div>
-    <div class="wrapper wrapper__readable">
-      <div class="content"><slot /></div>
-    </div>
-    <footer class="tac mt6">
-      <a href="/projects">
-        <Button>View More</Button>
-      </a>
-    </footer>
+
     <Footer />
   </body>
 </html>
