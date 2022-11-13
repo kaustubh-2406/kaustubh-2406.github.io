@@ -1,13 +1,13 @@
 const skills = [
-  { title: "Frontend Developement" },
-  { title: "Content Managment Systems" },
-  { title: "User Interface Design" },
-  { title: "User Experience" },
-  { title: "Basics Of Backend Development" },
-  { title: "Databases" },
-  { title: "REST API" },
-  { title: "GraphQL" },
-  { title: "Command Line" },
+  { score: 8, title: "Frontend Developement" },
+  { score: 8, title: "Content Managment Systems" },
+  { score: 7, title: "User Interface Design" },
+  { score: 7, title: "User Experience" },
+  { score: 8, title: "Basics Of Backend Development" },
+  { score: 7, title: "Databases" },
+  { score: 7, title: "REST API" },
+  { score: 7, title: "GraphQL" },
+  { score: 7, title: "Command Line" },
 ];
 
 export default function Skills() {

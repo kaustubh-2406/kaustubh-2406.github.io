@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SocialIcons from "../SocialIcons/index.jsx";
 import styles from "./styles.module.css";
 
@@ -27,6 +27,14 @@ function Nav() {
       ))}
       <div className="w-full hidden sm:flex justify-end items-center">
         <SocialIcons />
+        {/* download resume */}
+        <a
+          className="px-4 py-2 bg-purple-300 rounded-md"
+          href="/kaustubh_resume.pdf"
+          download
+        >
+          See Resume
+        </a>
       </div>
     </nav>
   );

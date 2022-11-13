@@ -4,7 +4,7 @@ export default function () {
   return (
     <>
       <a
-        className="mx-2 hover:scale-110"
+        className="mx-2 scale-95 hover:scale-100"
         href="https://github.com/kaustubh-2406"
       >
         <svg data-color="black" className="block h-7 w-7" viewBox="0 0 16 16">
@@ -12,7 +12,7 @@ export default function () {
         </svg>
       </a>
       <a
-        className="mx-2 hover:scale-110"
+        className="mx-2 scale-95 hover:scale-100"
         href="https://www.linkedin.com/in/kaustubh-agrl"
       >
         <svg data-color="#A5CFE5" className="block h-8 w-8" viewBox="0 0 30 30">
