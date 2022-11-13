@@ -1,0 +1,85 @@
+[
+  {
+    "featured": true,
+    "title": "Apna Dairy",
+    "desc": "This project is was our submission for Smart India Hackathon 2022. We made our way to the SIH finals. It is a mobile app built using React Native and express backend.",
+    "links": [
+      {
+        "type": "primary",
+        "link": "https://www.github.com/ApnaDairy/mobile",
+        "info": "See Github Repo"
+      }
+    ],
+    "techs": [
+      "React.js",
+      "React Native",
+      "Typescript",
+      "Localisation i18n",
+      "Express.js",
+      "MongoDB",
+      "Web Sockets",
+      "Puppeteer Automation"
+    ]
+  },
+  {
+    "featured": true,
+    "title": "5 Random Words",
+    "desc": "A random word generator to suggest random project ideas for your next project. It's word generator is built using Rust. Frontend was built using Svelte app.",
+    "links": [
+      {
+        "type": "secondary",
+        "info": "See Github Repo",
+        "link": "https://www.github.com/kaustubh-2406/5-random-words"
+      },
+      {
+        "type": "primary",
+        "info": "Visit Site",
+        "link": "https://5-random-words.vercel.app/"
+      }
+    ],
+    "techs": [
+      "Vite",
+      "Tailwind CSS",
+      "Rust",
+      "Typescript",
+      "Svelte",
+      "Monorepo",
+      "Turborepo",
+      "Vercel deployment"
+    ]
+  },
+  {
+    "featured": true,
+    "title": "Hangman Game",
+    "desc": "A hangman game built using Lua and Love2d game engine.",
+    "links": [
+      {
+        "type": "primary",
+        "info": "See Github Repo",
+        "link": "https://www.github.com/kaustubh-2406/lua-hangman"
+      }
+    ],
+    "techs": ["Lua", "Love 2d", "Game Dev"]
+  },
+  {
+    "featured": false,
+    "title": "2048 game",
+    "desc": "2048 game is a fun game where we control the blocks laid on 4x4 board. When we combine two blocks they get combined and its value get changed to the next power of 2. Doing this process we intend to create 2048.",
+    "links": ["https://www.github.com/kaustubh-2406/"],
+    "techs": ["HTML 5", "CSS 3", "Javascript"]
+  },
+  {
+    "featured": false,
+    "title": "Game of life",
+    "desc": "Game of life is a cellular automation devised by British mathematician. There is no win or lose, it is just for stimutaion purpose. In it a population of cells are selected at random and rules dictate wheather they would survive for next genration or not. Build with react",
+    "links": ["https://www.github.com/kaustubh-2406/"],
+    "techs": ["HTML 5", "CSS 3", "Javascript", "React.js"]
+  },
+  {
+    "featured": false,
+    "title": "Tracky - Time tracking extension for Chrome",
+    "desc": "It is a time tracking extension for chromium browsers. It is one of my first projects.",
+    "links": ["https://www.github.com/kaustubh-2406"],
+    "techs": ["HTML 5", "CSS 3", "Javascript", "Chrome Extension"]
+  }
+]

@@ -1,11 +1,16 @@
 import React from "react";
 
-export default function ({ content, color, rounded }) {
+export default function ({ content, color }) {
   const style = {
-    borderRadius: rounded ? "20%/50%" : "0%",
     backgroundColor: color,
-    padding: "0.4rem 0.8rem",
   };
 
-  return <span style={style}>{content}</span>;
+  return (
+    <span
+      className="rounded-full py-2 flex justify-center items-center px-3.5"
+      style={style}
+    >
+      {content}
+    </span>
+  );
 }

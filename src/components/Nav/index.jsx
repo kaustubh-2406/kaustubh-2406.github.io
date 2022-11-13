@@ -1,16 +1,15 @@
-import React, { useEffect } from "react";
-// import Styles from "./styles.module.scss";
+import React from "react";
 import SocialIcons from "../SocialIcons/index.jsx";
 import styles from "./styles.module.css";
 
-function Nav({ active = "home" }) {
+function Nav() {
   const links = [
-    { href: "/", name: "Home", active: active === "home" },
-    { href: "/about", name: "About", active: active === "about" },
+    { href: "/", name: "Home" },
+    { href: "/about", name: "About" },
   ];
 
   return (
-    <nav className="w-full flex justify-center items-center px-4 py-8 border border-gray border-1 fixed bg-opacity-80 bg-white z-50">
+    <nav className="w-full flex justify-center items-center px-4 py-8 border border-gray border-1 fixed bg-opacity-95 bg-white z-50">
       <a className="mx-2" href="/">
         <div className="border-2 rounded-full border-black p-1 px-2">KA</div>
       </a>
@@ -18,7 +17,9 @@ function Nav({ active = "home" }) {
       {links.map((link) => (
         <a
           key={link.href}
-          className={`mx-2 relative border-solid ${styles.hoverLink}`}
+          className={`mx-2 relative border-solid ${styles.hoverLink} ${
+            link.active ? "bg-red-200" : ""
+          }`}
           href={link.href}
         >
           {link.name}

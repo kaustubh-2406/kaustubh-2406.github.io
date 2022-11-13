@@ -1,0 +1,34 @@
+[
+  {
+    "name": "C/C++",
+    "reason": "C++ was taught to me in 11-12th grade. It was the first programming language that i learned and it helped me a lot to get a clear understanding of concepts ranging from basics like variables functions to advanced concepts pointers"
+  },
+  {
+    "name": "HTML and CSS",
+    "reason": "This was the one of the first thing that i learned in terms of programing. It was pretty nice to see websites that felt alienating before, and make one by yourself. It reserves a speacial place in heart"
+  },
+  {
+    "name": "Javascript",
+    "reason": "JS is the first programming language that i have learned seriously. After learning html and css, I jumped in javascript and it presented a plethora of things to learn.. ranging from concepts like loops to promises."
+  },
+  {
+    "name": "React.js",
+    "reason": "React.js helps to make websites faster. It reduces the amount of redundent code, by making it very easy to create reusable component. I am more comfortable with React as compared to only html+css solution. In general any frontend framework does great, wheather it be vue or svelte that helps create reusable components."
+  },
+  {
+    "name": "Backend",
+    "reason": "I have used both Nodejs for backend development. I have used express for nodejs development. It is just awesome. It provides a great power to work on that. In the Python world,  I have tried Flask to create an sever-side-rendered website during an hackathon. I have also experimented with Django a little bit."
+  },
+  {
+    "name": "Rust",
+    "reason": "Rust is a memory safe alternative to C. Since it is compared to C/C++, it is bound to be fast. I am learning it because, I personally find C/C++ harder to work with, and don't like Java very much. Also rust can be a huge, and I don't want to miss on hypetrain :). "
+  },
+  {
+    "name": "Haskell",
+    "reason": "Recently, I started learning haskell on a friend's recomendation and I have loved it so far. It is fun to program in a purely function language where you have nothing but function. I learned lot about function programing. I would recommend everyone to try it once, it is a great experience."
+  },
+  {
+    "name": "Lua",
+    "reason": "Lua is an easy to use scripting language that has a good name in game-dev field. I am trying it out with Love2d game engine. It feels very low level and sometimes, I do like that control over things."
+  }
+]
