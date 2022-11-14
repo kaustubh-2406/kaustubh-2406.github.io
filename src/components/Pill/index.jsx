@@ -7,7 +7,7 @@ export default function ({ content, color }) {
 
   return (
     <span
-      className="rounded-full py-2 flex justify-center items-center px-3.5"
+      className="rounded-full py-2 flex justify-center items-center px-5"
       style={style}
     >
       {content}

@@ -5,7 +5,7 @@
     "desc": "This project is was our submission for Smart India Hackathon 2022. We made our way to the SIH finals. It is a mobile app built using React Native and express backend.",
     "links": [
       {
-        "type": "primary",
+        "type": "secondary",
         "link": "https://www.github.com/ApnaDairy/mobile",
         "info": "See Github Repo"
       }
@@ -54,7 +54,7 @@
     "desc": "A hangman game built using Lua and Love2d game engine.",
     "links": [
       {
-        "type": "primary",
+        "type": "secondary",
         "info": "See Github Repo",
         "link": "https://www.github.com/kaustubh-2406/lua-hangman"
       }
