@@ -42,7 +42,7 @@ export default function ProjectCard({ interactive, project, techs, setTechs }) {
   }
 
   return (
-    <div ref={ref} className={`${basicCNs} ${cls}`}>
+    <div ref={ref} className={`${basicCNs} ${cls} bg-purple-500`}>
       <h5 className="text-xl mb-2 font-semibold">{project.title}</h5>
       <p className="text-md">{project.desc}</p>
 
@@ -55,12 +55,16 @@ export default function ProjectCard({ interactive, project, techs, setTechs }) {
         </div>
       </div>
 
-      <div className="flex gap-4 mt-4">
+      <div className="flex flex-wrap gap-4 mt-4">
         {project.links.map((p) => (
           <a
             target="_blank"
             key={p.link + ":" + p.info}
-            className="text-red-800 hover:underline"
+            className={
+              p.type == "primary"
+                ? "hover:scale-105 bg-[#4B4453] text-white px-4 py-2 rounded-md"
+                : "hover:scale-105 bg-purple-200 text-black px-4 py-2 rounded-md"
+            }
             href={p.link}
           >
             {p.info}
